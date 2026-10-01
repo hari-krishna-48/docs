@@ -1,0 +1,65 @@
+---
+sidebar_position: 2
+title: Sample Page
+description: A sample page showing the building blocks available for these docs.
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Sample Page
+
+This is a sample page for the **Data Systems Architecture** docs. Copy it as a starting point for new pages.
+
+## Overview
+
+Use a short intro paragraph to say what the page covers and who it is for.
+
+:::tip
+
+Any `.md` or `.mdx` file in the `docs/` folder shows up in the sidebar automatically. Set `sidebar_position` in the front matter to control its order.
+
+:::
+
+## Components
+
+| Component | Role          | Notes                     |
+| --------- | ------------- | ------------------------- |
+| Ingestion | Collects data | Batch or streaming        |
+| Storage   | Persists data | Data lake or warehouse    |
+| Serving   | Exposes data  | Dashboards, APIs, queries |
+
+## Example Query
+
+```sql title="example.sql"
+SELECT customer_id, COUNT(*) AS orders
+FROM orders
+GROUP BY customer_id
+ORDER BY orders DESC
+LIMIT 10;
+```
+
+## Running Locally
+
+<Tabs>
+  <TabItem value="npm" label="npm" default>
+
+```bash
+npm run start
+```
+
+  </TabItem>
+  <TabItem value="yarn" label="yarn">
+
+```bash
+yarn start
+```
+
+  </TabItem>
+</Tabs>
+
+:::note
+
+Link to other docs with relative paths, e.g. [Home](./index.mdx).
+
+:::
